@@ -54,18 +54,6 @@ const AdminPage = () => {
     setTimeout(() => setMessage(''), 3000);
   };
 
-  const fetchEvents = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch('/api/events');
-      const data = await response.json();
-      setEvents(data);
-    } catch (error) {
-      console.error('Error fetching events:', error);
-      showMessage('Error loading events');
-    }
-    setLoading(false);
-  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
