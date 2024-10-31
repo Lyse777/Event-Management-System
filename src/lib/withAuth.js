@@ -8,7 +8,7 @@ const withAuth = (WrappedComponent) => {
     const router = useRouter();
 
     useEffect(() => {
-      if (status === 'loading') return;
+      if (status === 'loading') return;jj
 
       if (!session) {
         router.replace('/login');
