@@ -116,7 +116,7 @@ export default function EventsPage() {
             <div className="flex items-center gap-6">
               <div className="relative w-[200px] h-[100px]">
                 <Image
-                  src="/Gobi.jpg"
+                  src="/Gobi.JPG"
                   alt="Gobi Logo"
                   fill
                   style={{ objectFit: 'contain' }}
