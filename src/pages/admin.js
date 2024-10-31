@@ -1,7 +1,7 @@
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback }
 import { LogOut, PenSquare, Trash2, FileText, Plus } from 'lucide-react';
 import {
   AlertDialog,
@@ -26,6 +26,19 @@ const AdminPage = () => {
 
 
   const today = new Date().toISOString().split('T')[0];
+
+  const fetchEvents = useCallback(async () => {
+    setLoading(true);
+    try {
+      const response = await fetch('/api/events');
+      const data = await response.json();
+      setEvents(data);
+    } catch (error) {
+      console.error('Error fetching events:', error);
+      showMessage('Error loading events');
+    }
+    setLoading(false);
+  }, []);
 
   useEffect(() => {
     if (status === 'loading') return;
