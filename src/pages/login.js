@@ -47,7 +47,7 @@ export default function LoginPage() {
         <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
           <div className="w-[200px] h-[100px] mx-auto relative">
             <Image
-              src="/Gobi.jpg"
+              src="/Gobi.JPG"
               alt="Gobi Logo"
               fill
               style={{ objectFit: 'contain' }}
