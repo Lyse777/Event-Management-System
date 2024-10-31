@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export default function LoginPage() {
   const [error, setError] = useState('');
-  const router = useRouter();
+  const router = useRouter();Z
 
   const handleSubmit = async (e) => {
     e.preventDefault();
