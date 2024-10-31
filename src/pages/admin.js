@@ -34,7 +34,7 @@ const AdminPage = () => {
     } else {
       fetchEvents();
     }
-  }, [session, status]);
+  }, [session, status, fetchEvents, router]);
 
   const showMessage = (text) => {
     setMessage(text);
